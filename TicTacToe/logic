@@ -1,0 +1,94 @@
+Game Flow
+
+- store winning combinations in a const object called winCombs //RULES
+
+- Welcome screen 'Tic Tac Toe' with "let's play" button "no thanks" button
+- if no thanks then exit else if lets play then enter game
+
+-If new player (if localStorage ===0), Initiate player
+  - ask players name (store as object for localStorage)
+  - obj {name"", score"", number of games"", level""}// titles won, favorite board
+  - assign as player 1 (temp)
+  - welcome "name"
+
+
+Choose game style/ KISS
+- give options - with begin/play button
+    - easy //KISS set as default
+    3x3 play as you go or best of 3
+    - make your life hard / F#@K lolzzzz
+      - best of assign + choose board size, or timeout/distraction time over, brain work out(increase size of board with every game)
+    - new game
+// SIMPLIFY THIS - START ONLY WITH BASIC
+
+- new game
+  - retrieve current score
+  - initialise game
+          - initialise game
+            - check if first game today
+            - if true assign as player 1(x) - x marks the spot
+              - let currentID be x or o - assign x or 0 marker imgs
+            - else check if  lastStatus winner or loser
+              - if winner let current status be x, assign imgX // player1
+              - else let status be o assign imgO//player2
+            - begin game // alert let the games begin - boxing ring bell x vs o
+
+          - begin game
+            - launch board //restart or quit buttons
+              - launch board SETUP
+                  - create board - use divs+borders/ table/ svg and map positions
+                  - create const availPos array for positions as per div /location as function
+                  - show board, hide/toggle all markers
+
+            - playmode (recursive till 'win' or 'draw') //change player like direction/ increment to switch user, store values?
+              - create temp availPos
+              - alert player for their turn
+                - player1 plays
+                  - track moves
+                    - calculate number of moves // quick tac toe - timed moves
+                - player2 plays
+                  - track moves
+                    - calculate number of moves
+            - calculate and store score
+            - end game
+
+- track moves
+ - loop? can recursive function subsitute this
+  - check conditions
+    - if draw, array will be empty (board full)
+    - if win, win key in object will be true
+      - congratulate winner //"Congratulations." + fireworks or something
+      - return currentStatus to lastStatus
+      - make currentStatus empty
+      - show score/ scoreboard
+      - update localStorage
+      - ask play again or exit // alery corresponding msg
+    - else {
+      for each player
+        - create empty array of playerIdMoves
+        - if click, draw currentID - toggle display acc to currentID ie show x or show o
+          - in css position in centre of div, display hidden
+        - remove div from temp availPos i.e. make unavailable to select - no error msg required,
+        - store element in playerIdMoves
+        - console.log();// alert next players turn
+    }
+
+
+- if player returns - welcome back message (updated h1 to personalised h1)
+
+
+
+read again
+
+moves Logic // computer player
+
+
+
+1. Draw board in HTML
+2. Create JS object to store
+
+let board = [
+  [1, 2, 3],  // row 1
+  [4, 5, 6],  // row 2
+  [7, 8, 9],  // row 3
+];
