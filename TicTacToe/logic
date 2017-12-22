@@ -53,7 +53,7 @@ Choose game style/ KISS
             - end game
 
 - track moves
- - loop? can recursive function subsitute this
+ - loop? can recursive function substitute this
   - check conditions
     - if draw, array will be empty (board full)
     - if win, win key in object will be true

@@ -1,65 +1,59 @@
-body, #container {
+body, #container, header {
   top: 0;
   left: 0;
   margin: 0 auto;
   width: 100%;
-  height: 100%vh;
 }
 
-h1 {
+header {
+  position: fixed;
+  display: block;
+  background-color: #FF7055;
+  width: 100%;
+  height: 100px;
+}
+
+h1,h2 {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 45px;
-  display: block;
-  padding-top: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  display: inline-block;
   text-align: center;
-
-}
-
-h2 {
-  display: block;
-  text-align: center;
-  padding-bottom: 10px ;
-  font-size: 27px;
+  color: white;
+  padding: 5px 20px;
 }
 
 #board {
   position: relative;
-  margin: auto;
+  margin:  150px auto 0;
   width: 600px;
   height: 600px;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 150px;
 }
 
 .square {
   position: relative;
-  top: 0;
-  left: 0;
   display: inline-block;
   width: 197px;
   height: 197px;
   background-color: white;
   float: left;
   text-align: center;
-
+  cursor: pointer;
 }
 
-.content {
-  position: absolute;
+.playerID{
   display: block;
-  text-align: center;
-  top:50%;
-  width: 100%;
+  position: relative;
+  left: 25%;
+  margin: auto;
+  top: 100px;
 }
 
-#box1 {
-  background-color: salmon;
-}
 #box2 {
   border-left: 1px solid black;
   border-right: 1px solid black;
-}
-#box3 {
-  background-color: hotpink;
 }
 #box4 {
   border-top: 1px solid black;
@@ -72,22 +66,57 @@ h2 {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-#box7 {
-  background-color: violet;
-}
 #box8 {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
-#box9 {
-  background-color: lightcoral;
-}
-#box1 {
-  background-color: lightsalmon;
-}
-#box1 {
-  background-color: peachpuff;
+
+.message-container{
+  display: none;
+  width:500px;
+  height: 450px;
+  background-color: rgb(212, 219, 221);
 }
 
-/*#FF7055
-#FF7E55*/
+.message{
+  display: block;
+  position: absolute;
+  left: 25%;
+  margin: auto;
+  top: 100px;
+  width: 350px;
+  height: 200px;
+  background-color: rgba(255,255,255,.98);
+  box-shadow: 6px 6px 2px 1px rgba(100, 100, 100, .2);
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  border-radius: 15px;
+}
+
+#message-alert{
+  display: block;
+  font-size: 45px;
+  color: tomato;
+}
+
+.buttonreg {
+    color: #202129;
+    background-color: #f2f2f2;
+    width: 120px;
+    height: 45px;
+    top: -40px;
+    left: 23px;
+    display: inline;
+    position: relative;
+    border-radius: 15px;
+    margin: 25px 15px;
+    float: left;
+    cursor: pointer;
+}
+/*@keyframes spin {*/
+    /*from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}*/
