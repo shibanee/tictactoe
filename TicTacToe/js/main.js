@@ -4,8 +4,8 @@ let $board;
 let currentPlayer = 'X';
 
 $(document).ready(function(){
-const player1 = 'X';
-const player2 = 'O';
+// const player1 = 'X';
+// const player2 = 'O';
 
 $board = [
   [1, 2, 3],  // row 1
@@ -55,16 +55,8 @@ const checkWinLongWay = function () { // not DRY
       }
 
   else if(
-      ($('#box1').text() + $('#box2').text()  + $('#box3').text() != winString) &&
-      ($('#box4').text() + $('#box5').text()  + $('#box6').text() != winString) &&
-      ($('#box7').text() + $('#box8').text()  + $('#box9').text() != winString) &&
-      ($('#box1').text() + $('#box5').text()  + $('#box9').text() != winString) &&
-      ($('#box3').text() + $('#box5').text()  + $('#box7').text() != winString) &&
-      ($('#box1').text() + $('#box4').text()  + $('#box7').text() != winString) &&
-      ($('#box2').text() + $('#box5').text()  + $('#box8').text() != winString) &&
-      ($('#box3').text() + $('#box6').text()  + $('#box9').text() != winString) &&
-
-      ($('#box1').text() && $('#box2').text() && $('#box3').text() && $('#box4').text() && $('#box5').text() && $('#box6').text() && $('#box7').text() && $('#box8').text() && $('#box9').text() !=0)
+  
+      ($('#box1').text() && $('#box2').text() && $('#box3').text() && $('#box4').text() && $('#box5').text() && $('#box6').text() && $('#box7').text() && $('#box8').text() && $('#box9').text())
       ){
       alertDraw();
       }
